@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Typing Effect
   const typingElement = document.querySelector(".typing-text");
   if (typingElement) {
-    const texts = ["Junior Web Developer", "Cybersecurity Engineer"];
+    const texts = ["Junior Web Developer", "Cybersecurity Engineer", "Machine Learning Enthusiast"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
