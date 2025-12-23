@@ -84,4 +84,29 @@ document.addEventListener("DOMContentLoaded", function() {
   //     contactForm.reset();
   //   });
   // }
+
+  // Scroll Animations using Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Stop observing once shown
+        observer.unobserve(entry.target);
+        // Remove .hidden class after animation (1s) to restore original transitions for hover effects
+        setTimeout(() => {
+          entry.target.classList.remove('hidden');
+          entry.target.classList.remove('show');
+        }, 1000);
+      }
+    });
+  }, observerOptions);
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
 });

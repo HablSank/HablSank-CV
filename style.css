@@ -784,3 +784,60 @@ footer p {
         font-size: 1rem;
     }
 }
+
+/* Scroll Animation Classes */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Specific delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Enhanced Hover Effects */
+.navbar-nav a {
+    position: relative;
+}
+
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: bisque;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav a:hover::after {
+    width: 100%;
+}
+
+.detail-container-1, .detail-container-2, .detail-container-3 {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.detail-container-1:hover, .detail-container-2:hover, .detail-container-3:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
+}
+
+.home-link a, .project-link a, .certificate-link a, .contact-form button {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.home-link a:hover, .project-link a:hover, .certificate-link a:hover, .contact-form button:hover {
+    box-shadow: 0 6px 12px rgba(255, 228, 196, 0.2);
+    transform: translateY(-2px);
+}
