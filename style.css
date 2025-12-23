@@ -843,3 +843,18 @@ footer p {
     box-shadow: 0 6px 12px rgba(255, 228, 196, 0.2);
     transform: translateY(-2px);
 }
+/* Typing Effect Cursor */
+.typing-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Adjust paragraph-2-home to ensure fixed height to prevent layout jump (optional) */
+.paragraph-2-home {
+    min-height: 1.8rem; /* approximate height of one line */
+}

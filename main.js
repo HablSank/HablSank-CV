@@ -109,4 +109,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((el) => observer.observe(el));
+
+  // Typing Effect
+  const typingElement = document.querySelector(".typing-text");
+  if (typingElement) {
+    const texts = ["Junior Web Developer", "Cybersecurity Engineer"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function type() {
+      const currentText = texts[textIndex];
+
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50; // Faster when deleting
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100; // Normal typing speed
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        // Finished typing current text
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        // Finished deleting
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 500; // Pause before typing next
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    // Start typing
+    setTimeout(type, 1000);
+  }
 });
