@@ -84,4 +84,69 @@ document.addEventListener("DOMContentLoaded", function() {
   //     contactForm.reset();
   //   });
   // }
+
+  // Scroll Animations using Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Stop observing once shown
+        observer.unobserve(entry.target);
+        // Remove .hidden class after animation (1s) to restore original transitions for hover effects
+        setTimeout(() => {
+          entry.target.classList.remove('hidden');
+          entry.target.classList.remove('show');
+        }, 1000);
+      }
+    });
+  }, observerOptions);
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+  // Typing Effect
+  const typingElement = document.querySelector(".typing-text");
+  if (typingElement) {
+    const texts = ["Junior Web Developer", "Cybersecurity Engineer", "Machine Learning Enthusiast"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function type() {
+      const currentText = texts[textIndex];
+
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50; // Faster when deleting
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100; // Normal typing speed
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        // Finished typing current text
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        // Finished deleting
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 500; // Pause before typing next
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    // Start typing
+    setTimeout(type, 1000);
+  }
 });

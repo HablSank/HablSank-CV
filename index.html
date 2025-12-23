@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.css" />
-    <title>Portofolio</title>
+    <title>Habl Sankrumi Pradhab - Portfolio</title>
+    <meta name="description" content="Portfolio of Habl Sankrumi Pradhab, a Junior Web Developer & Cybersecurity Engineer based in Surabaya.">
 
   </head>
   <body>
@@ -40,12 +41,12 @@
 
     <section>
       <div class="home" id="home">
-        <div class="home-page">
+        <div class="home-page hidden">
 
           <div class="home-text">
             <p class="paragraph-home">Halo!, Saya</p>
             <h1 class="name-home">Habl Sankrumi Pradhab</h1>
-            <p class="paragraph-2-home">Junior Web Developer & Cybersecurity Engineer</p>
+            <p class="paragraph-2-home"><span class="typing-text"></span></p>
           </div>
 
           <div class="home-link">
@@ -55,7 +56,7 @@
 
         </div>
 
-        <div class="photo-home">
+        <div class="photo-home hidden delay-200">
           <img class="photo-habl" src="assets/hablsank.jpg" alt="foto-habl">
         </div>
 
@@ -64,22 +65,22 @@
 
 
     <section>
-      <div class="about" id="about">
+      <div class="about hidden" id="about">
         <div class="about-text"> 
           <p class="paragraph-home">Ketahui Lebih Lanjut</p>
           <h1 class="name-home">Tentang Saya</h1></div>
         <div class="section-about-container">
 
-          <div class="about-picture">
+          <div class="about-picture hidden delay-200">
             <img src="assets/fotoabout.png" alt="about-photo" class="about-photo-1">
           </div>
 
-          <div class="about-detail-container">
+          <div class="about-detail-container hidden delay-300">
             <div class="about-container">
               <div class="detail-container-1">
                 <div class="icon-detail"><i class="fa-solid fa-briefcase"></i></div>
                 <h3>Pengalaman</h3>
-                <p> 1+- Tahun <br>Frontend Developer</p>
+                <p> 2 Tahun <br>Fullstack Dev <br>Cybersecurity / CTF <br>Machine Learning</p>
               </div>
               <div class="detail-container-1">
                 <div class="icon-detail"><i class="fa-solid fa-graduation-cap"></i></div>
@@ -88,7 +89,7 @@
               </div>
             </div>
             <div class="text-about-container">
-              <p>Saya Habl dan sekarang saya adalah seorang siswa kelas 10 SMK Negeri 1 Surabaya jurusan RPL (Rekayasa Perangkat Lunak) yang sekarang sedang menekuni bidang programming dan sedang belajar pengembangan web dan cybersecurity. Saya juga merupakan lulusan dari sekolah SMP Negeri 13 Surabaya dan SD Kreatif 16 Surabaya</p>
+              <p>Saya Habl dan sekarang saya adalah seorang siswa kelas 11 SMK Negeri 1 Surabaya jurusan RPL (Rekayasa Perangkat Lunak) yang sekarang sedang menekuni bidang programming dan sedang memperdalam ilmu di bidang Front End Web Development, Cybersecurity, dan Machine Learning. Saya juga merupakan lulusan dari sekolah SMP Negeri 13 Surabaya dan SD Kreatif 16 Surabaya.</p>
             </div>
           </div>        
         </div>
@@ -96,62 +97,113 @@
     </section>
 
     <section>
-      <div class="skill" id="skill">
+      <div class="skill hidden" id="skill">
         <div class="skill-text">
           <p class="paragraph-home">Berbagai Macam</p>
           <h1 class="name-home">Keahlian</h1>
         </div>
       <div class="skill-detail-container">
         <div class="skill-container">
+          <!-- Frontend -->
           <div class="detail-container-2">
             <h2 class="skill-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <div class="icon-detail"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="icon-detail"><i class="fa-brands fa-html5"></i></div>
                 <div>
                   <h3>HTML</h3>
                   <p>Mahir</p>
                 </div>
               </article>
               <article>
-                <div class="icon-detail"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="icon-detail"><i class="fa-brands fa-css3-alt"></i></div>
                 <div>
                   <h3>CSS</h3>
                   <p>Berpengalaman</p>
                 </div>
               </article>
               <article>
-                <div class="icon-detail"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="icon-detail"><i class="fa-brands fa-js"></i></div>
                 <div>
                   <h3>Javascript</h3>
-                  <p>Pemula</p>
+                  <p>Menengah</p>
                 </div>
               </article>
               <article>
-                <div class="icon-detail"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="icon-detail"><i class="fa-solid fa-wind"></i></div>
                 <div>
                   <h3>Tailwind</h3>
+                  <p>Berpengalaman</p>
+                </div>
+              </article>
+              <article>
+                <div class="icon-detail"><i class="fa-brands fa-react"></i></div>
+                <div>
+                  <h3>React</h3>
                   <p>Pemula</p>
                 </div>
               </article>
               <article>
-                <div class="icon-detail"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="icon-detail"><i class="fa-brands fa-vuejs"></i></div>
                 <div>
-                  <h3>Git/Github</h3>
+                  <h3>Vue.js</h3>
                   <p>Pemula</p>
                 </div>
               </article>
-
             </div>
           </div>
+
+          <!-- Backend -->
           <div class="detail-container-2">
             <h2 class="skill-title">Backend Development</h2>
             <div class="article-container">
               <article>
-                <div class="icon-detail"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="icon-detail"><i class="fa-brands fa-laravel"></i></div>
+                <div>
+                  <h3>Laravel</h3>
+                  <p>Menengah</p>
+                </div>
+              </article>
+              <article>
+                <div class="icon-detail"><i class="fa-solid fa-database"></i></div>
                 <div>
                   <h3>MySQL</h3>
-                  <p>Pemula</p>
+                  <p>Menengah</p>
+                </div>
+              </article>
+              <article>
+                <div class="icon-detail"><i class="fa-brands fa-git-alt"></i></div>
+                <div>
+                  <h3>Git/Github</h3>
+                  <p>Menengah</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Emerging Tech -->
+          <div class="detail-container-2">
+            <h2 class="skill-title">Cybersecurity & AI</h2>
+            <div class="article-container">
+              <article>
+                <div class="icon-detail"><i class="fa-solid fa-flag"></i></div>
+                <div>
+                  <h3>CTF / Security</h3>
+                  <p>Berpengalaman</p>
+                </div>
+              </article>
+              <article>
+                <div class="icon-detail"><i class="fa-solid fa-brain"></i></div>
+                <div>
+                  <h3>Machine Learning</h3>
+                  <p>Berpengalaman</p>
+                </div>
+              </article>
+              <article>
+                <div class="icon-detail"><i class="fa-brands fa-python"></i></div>
+                <div>
+                  <h3>Python</h3>
+                  <p>Menengah</p>
                 </div>
               </article>
             </div>
@@ -162,13 +214,13 @@
     </section>
 
     <section>
-      <div class="project" id="project">
+      <div class="project hidden" id="project">
         <div class="project-text">
           <p class="paragraph-home">Berbagai Hasil</p>
           <h1 class="name-home">Projek</h1>
         </div>
         <div class="project-detail-container">
-          <div class="detail-container-3 color-container">
+          <div class="detail-container-3 color-container hidden delay-100">
             <div class="article-container">
               <img class="project-image" src="assets/Project CandyVet.png" alt="Project Candy Vet">
             </div>
@@ -179,7 +231,7 @@
               <a href="https://candyvet.vercel.app">Live Demo</a>
             </div>
           </div>
-          <div class="detail-container-3 color-container">
+          <div class="detail-container-3 color-container hidden delay-200">
             <div class="article-container">
               <img class="project-image" src="assets/Project HDE.png" alt="Project Health Digicate">
             </div>
@@ -190,7 +242,7 @@
               <a href="https://healthdigicate.vercel.app">Live Demo</a>
             </div>
           </div>
-          <div class="detail-container-3 color-container">
+          <div class="detail-container-3 color-container hidden delay-300">
             <div class="article-container">
               <img class="project-image" src="assets/project orbit.png" alt="Project Tata Surya">
             </div>
@@ -201,7 +253,7 @@
               <a href="https://tatasuryaku-five.vercel.app">Live Demo</a>
             </div>
           </div>
-          <div class="detail-container-3 color-container">
+          <div class="detail-container-3 color-container hidden delay-100">
             <div class="article-container">
               <img class="project-image" src="assets/Project Watchlist.png" alt="Project Movie Watchlist">
             </div>
@@ -212,7 +264,7 @@
               <a href="https://movie-watchlistku.vercel.app">Live Demo</a>
             </div>
           </div>
-          <div class="detail-container-3 color-container">
+          <div class="detail-container-3 color-container hidden delay-200">
             <div class="article-container">
               <img class="project-image" src="assets/Project Kecamatanku.png" alt="Project Pengaduan Kecamatanku">
             </div>
@@ -223,7 +275,7 @@
               <a href="https://kecamatanku.vercel.app">Live Demo</a>
             </div>
           </div>
-          <div class="detail-container-3 color-container">
+          <div class="detail-container-3 color-container hidden delay-300">
             <div class="article-container">
               <img class="project-image" src="assets/Project JJK.png" alt="Project Jujutsu Kaisen Sorcerers">
             </div>
@@ -239,12 +291,30 @@
     </section>
 
     <section>
-      <div class="certificate" id="certificate">
+      <div class="certificate hidden" id="certificate">
         <div class="certificate-text">
           <p class="paragraph-home">Berbagai Koleksi</p>
           <h1 class="name-home">Sertifikat</h1>
         </div>
         <div class="certificate-detail-container">
+          <!--
+            PANDUAN MENAMBAHKAN SERTIFIKAT BARU:
+            Copy blok div 'detail-container-3' di bawah ini dan paste di dalam 'certificate-detail-container'.
+            Ganti 'src' gambar, 'alt' text, judul, sub-judul, dan href file PDF sesuai kebutuhan.
+          -->
+          <!--
+          <div class="detail-container-3 color-container">
+            <div class="article-container">
+              <img class="certificate-image" src="path/to/image.png" alt="Nama Sertifikat">
+            </div>
+            <h2 class="project-title">Judul Sertifikat</h2>
+            <h3 class="project-sub-title">Penerbit / Deskripsi</h3>
+            <div class="certificate-link">
+              <a href="path/to/certificate.pdf">Unduh Sertifikat</a>
+            </div>
+          </div>
+          -->
+
           <div class="detail-container-3 color-container">
             <div class="article-container">
               <img class="certificate-image" src="assets/screenshot-sertifikat-dicoding(1).png" alt="Dicoding">
@@ -342,23 +412,23 @@
 
 
     <section>
-      <div class="contact" id="contact">
+      <div class="contact hidden" id="contact">
         <div class="contact-text">
           <p class="paragraph-home">Silahkan Hubungi</p>
           <h1 class="name-home">Kontak Saya</h1>
         </div>
         <div class="contact-form">
-            <form>
+            <form action="https://formspree.io/f/xzdpklav" method="POST">
                 <div class="input-group">
-                    <input type="text" id="name" placeholder=" " required>
+                    <input type="text" id="name" name="name" placeholder=" " required>
                     <label for="name">Nama Anda</label>
                 </div>
                 <div class="input-group">
-                    <input type="email" id="email" placeholder=" " required>
+                    <input type="email" id="email" name="email" placeholder=" " required>
                     <label for="email">Email Anda</label>
                 </div>
                 <div class="input-group">
-                    <textarea id="message" placeholder=" " rows="4" required></textarea>
+                    <textarea id="message" name="message" placeholder=" " rows="4" required></textarea>
                     <label for="message">Pesan Anda</label>
                 </div>
                 <button type="submit">Kirim</button>
